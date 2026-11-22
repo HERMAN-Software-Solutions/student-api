@@ -21,5 +21,5 @@ def get_students():
 @app.post("/students")
 def add_student(student: Student):
     # FastAPI automatically ensures 'name', 'grade', and 'course' are provided
-    student_db.append(student)
+    students_db.append(student)
     return {"message": "Student added successfully", "student": student}
